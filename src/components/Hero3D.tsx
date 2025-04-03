@@ -1,4 +1,3 @@
-
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, useTexture } from '@react-three/drei';
@@ -119,8 +118,11 @@ const HolographicGrid: React.FC<HolographicGridProps> = ({ size, divisions, heig
   const grid = useRef<THREE.LineSegments>(null!);
   
   useFrame((state) => {
-    if (grid.current) {
-      grid.current.material.opacity = 0.3 + Math.sin(state.clock.elapsedTime * 2) * 0.1;
+    if (grid.current && grid.current.material) {
+      // Type guard to ensure we're working with a single material that has opacity
+      if (!Array.isArray(grid.current.material) && grid.current.material.transparent) {
+        grid.current.material.opacity = 0.3 + Math.sin(state.clock.elapsedTime * 2) * 0.1;
+      }
     }
   });
   
@@ -177,7 +179,6 @@ const Architecture3D: React.FC = () => {
   );
 };
 
-// Animated particles effect
 const ParticleField: React.FC = () => {
   const count = 500;
   const positions = useMemo(() => {

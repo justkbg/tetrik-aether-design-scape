@@ -41,22 +41,22 @@ const Contact = () => {
 
   const offices = [
     {
-      city: 'New York',
-      address: '123 Design Avenue, New York, NY 10001',
-      phone: '+1 (212) 555-1234',
-      email: 'nyc@tetrikdesign.com',
+      city: 'Oyarefa',
+      address: 'Main Street, Oyarefa, Greater Accra, Ghana',
+      phone: '+233 50 497 6258',
+      email: 'info@tetrikdesign.com',
     },
     {
-      city: 'London',
-      address: '45 Architecture Street, London, EC1A 1BB',
-      phone: '+44 (0)20 7123 4567',
-      email: 'london@tetrikdesign.com',
+      city: 'Accra',
+      address: 'Independence Avenue, Accra Central, Ghana',
+      phone: '+233 50 123 4567',
+      email: 'accra@tetrikdesign.com',
     },
     {
-      city: 'Tokyo',
-      address: '2-1-1 Design District, Shibuya, Tokyo 150-0002',
-      phone: '+81 3-1234-5678',
-      email: 'tokyo@tetrikdesign.com',
+      city: 'Kumasi',
+      address: 'Prempeh II Street, Adum, Kumasi, Ghana',
+      phone: '+233 50 987 6543',
+      email: 'kumasi@tetrikdesign.com',
     },
   ];
 
@@ -125,7 +125,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-tetrik-dark border border-tetrik-gray rounded-md text-white focus:outline-none focus:border-tetrik-accent transition-colors"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+233 50 123 4567"
                   />
                 </div>
               </div>
@@ -206,7 +206,7 @@ const Contact = () => {
             <div className="mt-8 p-6 bg-tetrik-accent/10 backdrop-blur-sm rounded-lg border border-tetrik-accent/20">
               <h3 className="text-xl font-medium text-white mb-3">Career Opportunities</h3>
               <p className="text-tetrik-silver mb-4">
-                Interested in joining our team? We're always looking for talented individuals to help us shape the future of architecture.
+                Interested in joining our team? We're always looking for talented individuals to help us shape the future of architecture in Ghana.
               </p>
               <a 
                 href="mailto:careers@tetrikdesign.com" 
@@ -223,7 +223,7 @@ const Contact = () => {
       <Section className="bg-tetrik-black" withContainer={false}>
         <div className="h-[400px] w-full bg-tetrik-gray relative overflow-hidden">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6044.909815262252!2d-73.98262570284317!3d40.7614664135501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f07d5da561%3A0x61f6aa300ba8339d!2sThe%20Museum%20of%20Modern%20Art!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31767.347434039836!2d-0.16339465!3d5.7359285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d638e0516ed%3A0x573579b95d9d65dd!2sOyarefa%2C%20Ghana!5e0!3m2!1sen!2sus!4v1714025107180!5m2!1sen!2sus" 
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 

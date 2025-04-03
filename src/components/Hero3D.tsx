@@ -23,7 +23,7 @@ const Box: React.FC<BoxProps> = ({ position, size, color }) => {
   return (
     <mesh position={position} ref={mesh}>
       <boxGeometry args={size} />
-      <meshStandardMaterial color={color} />
+      <meshStandardMaterial color={new THREE.Color(color)} />
     </mesh>
   );
 };

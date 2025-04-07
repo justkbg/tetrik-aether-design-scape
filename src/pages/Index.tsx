@@ -6,28 +6,49 @@ import Hero3D from '@/components/Hero3D';
 import { BentoGrid, BentoGridItem } from '@/components/BentoGrid';
 import { ArrowRight } from 'lucide-react';
 
-// Portfolio items
+// Portfolio items with verified image URLs
 const featuredProjects = [
   {
     id: 1,
     title: 'Accra Innovation Hub',
     description: 'Commercial tech campus with sustainable design principles',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=1600&auto=format&fit=crop',
     category: 'Commercial',
   },
   {
     id: 2,
     title: 'Oyarefa Gardens',
     description: 'Luxury residential complex with integrated smart home technology',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop',
     category: 'Residential',
   },
   {
     id: 3,
     title: 'Cape Coast Cultural Center',
     description: 'Cultural landmark with dynamic exhibition spaces',
-    image: 'https://images.unsplash.com/photo-1580650958482-fbc4e4a323bc?q=80&w=1600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1600&auto=format&fit=crop',
     category: 'Cultural',
+  },
+  {
+    id: 4,
+    title: 'Kumasi Market Redevelopment',
+    description: 'Modern commercial space preserving traditional trading culture',
+    image: 'https://images.unsplash.com/photo-1577404699057-04440b45986f?q=80&w=1600&auto=format&fit=crop',
+    category: 'Commercial',
+  },
+  {
+    id: 5,
+    title: 'Tamale Eco Residences',
+    description: 'Sustainable housing development using local materials',
+    image: 'https://images.unsplash.com/photo-1494526585095-c41cabfe98bd?q=80&w=1600&auto=format&fit=crop',
+    category: 'Residential',
+  },
+  {
+    id: 6,
+    title: 'Labadi Beach Hotel Extension',
+    description: 'Luxury hospitality design with oceanfront views',
+    image: 'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=1600&auto=format&fit=crop',
+    category: 'Hospitality',
   },
 ];
 
@@ -133,7 +154,7 @@ const Index = () => {
           <div className="md:w-1/2 relative">
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <img
-                src="https://images.unsplash.com/photo-1643272415997-a4a7a86269e7?q=80&w=1200&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1624808334351-3ec2b33b0402?q=80&w=1200&auto=format&fit=crop"
                 alt="Tetrik Architecture Studio"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
@@ -171,7 +192,7 @@ const Index = () => {
         </div>
         
         <BentoGrid>
-          {featuredProjects.map((project) => (
+          {featuredProjects.slice(0, 6).map((project) => (
             <BentoGridItem
               key={project.id}
               className="relative overflow-hidden group"
@@ -255,11 +276,22 @@ const Index = () => {
                   <p className="text-tetrik-silver">Accra, Kumasi, Cape Coast, Tamale, Tema, and more</p>
                 </div>
               </li>
+              <li className="flex items-start">
+                <div className="w-8 h-8 rounded-full bg-tetrik-accent/20 flex items-center justify-center mr-3 mt-1">
+                  <svg className="w-4 h-4 text-tetrik-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-white text-lg font-medium">Contact</h3>
+                  <p className="text-tetrik-silver">Samira B. Froko Wemegah: 0504976258</p>
+                </div>
+              </li>
             </ul>
           </div>
           <div className="h-[400px] bg-tetrik-gray/30 rounded-lg overflow-hidden">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7946.8369609414475!2d-0.17659045624998705!3d5.73668389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9d638e0516ed%3A0x573579b95d9d65dd!2sOyarefa%2C%20Ghana!5e0!3m2!1sen!2sus!4v1714025107180!5m2!1sen!2sus" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254258.8615167253!2d-0.35913456899272437!3d5.6306729157285135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sus!4v1714091235066!5m2!1sen!2sus" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

@@ -1,3 +1,4 @@
+
 import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, useTexture } from '@react-three/drei';
@@ -129,7 +130,8 @@ const HolographicGrid: React.FC<HolographicGridProps> = ({ size, divisions, heig
   return <lineSegments ref={grid} geometry={lineGeometry} material={lineMaterial} />;
 };
 
-const Architecture3D: React.FC = () => {
+// Represents the National Theatre of Ghana
+const NationalTheatre: React.FC = () => {
   const groupRef = useRef<THREE.Group>(null!);
   
   useFrame((state) => {
@@ -143,38 +145,51 @@ const Architecture3D: React.FC = () => {
       {/* Holographic grid base */}
       <HolographicGrid size={20} divisions={20} height={-2.5} color="#00E6CA" />
       
-      {/* Base */}
-      <Box position={[0, -2, 0]} size={[10, 0.5, 10]} color="#1E1E1E" />
+      {/* Base platform */}
+      <Box position={[0, -2, 0]} size={[15, 0.5, 12]} color="#1E1E1E" />
       
-      {/* Main structure */}
-      <Box position={[0, 0, 0]} size={[5, 3, 5]} color="#333333" />
+      {/* Main curved roof structure - central dome */}
+      <mesh position={[0, 1, 0]}>
+        <sphereGeometry args={[4, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2]} />
+        <meshStandardMaterial color="#333333" metalness={0.7} roughness={0.2} />
+      </mesh>
       
-      {/* Upper level */}
-      <Box position={[0, 2, 0]} size={[7, 0.5, 7]} color="#1E1E1E" />
+      {/* Left wing */}
+      <mesh position={[-5, 0, 0]} rotation={[0, 0, Math.PI / 2.5]}>
+        <cylinderGeometry args={[3, 3, 8, 32, 1, true, -Math.PI / 2, Math.PI]} />
+        <meshStandardMaterial color="#444444" metalness={0.7} roughness={0.2} side={THREE.DoubleSide} />
+      </mesh>
       
-      {/* Second level structure */}
-      <Box position={[0, 3.5, 0]} size={[3, 2, 3]} color="#333333" />
+      {/* Right wing */}
+      <mesh position={[5, 0, 0]} rotation={[0, 0, -Math.PI / 2.5]}>
+        <cylinderGeometry args={[3, 3, 8, 32, 1, true, -Math.PI / 2, Math.PI]} />
+        <meshStandardMaterial color="#444444" metalness={0.7} roughness={0.2} side={THREE.DoubleSide} />
+      </mesh>
       
-      {/* Top level */}
-      <Box position={[0, 5, 0]} size={[4, 0.5, 4]} color="#1E1E1E" />
+      {/* Front façade */}
+      <Box position={[0, -0.75, 4]} size={[15, 2, 0.5]} color="#333333" />
       
-      {/* Accent elements */}
-      <Box position={[-2.5, 0, 2.5]} size={[0.5, 5, 0.5]} color="#00E6CA" pulse={true} />
-      <Box position={[2.5, 0, 2.5]} size={[0.5, 6, 0.5]} color="#00E6CA" pulse={true} />
-      <Box position={[2.5, 0, -2.5]} size={[0.5, 4, 0.5]} color="#00E6CA" pulse={true} />
-      <Box position={[-2.5, 0, -2.5]} size={[0.5, 7, 0.5]} color="#00E6CA" pulse={true} />
+      {/* Entrance steps */}
+      <Box position={[0, -1.5, 5.5]} size={[8, 0.5, 2.5]} color="#2A2A2A" />
+      <Box position={[0, -1.75, 7]} size={[6, 0.5, 2.5]} color="#252525" />
       
-      {/* Floating elements */}
-      <Cylinder position={[-3.5, 3, 3.5]} args={[0.2, 0.2, 4, 16]} color="#00E6CA" rotationAxis="x" />
-      <Cylinder position={[3.5, 4, -3.5]} args={[0.2, 0.2, 5, 16]} color="#00E6CA" rotationAxis="z" />
+      {/* Accent lighting */}
+      <Cylinder position={[-7, 0, 3]} args={[0.1, 0.1, 4, 16]} color="#00E6CA" rotationAxis="x" />
+      <Cylinder position={[7, 0, 3]} args={[0.1, 0.1, 4, 16]} color="#00E6CA" rotationAxis="x" />
       
-      {/* Futuristic spinning ring */}
-      <group position={[0, 7, 0]}>
+      {/* Decorative elements */}
+      <group position={[0, 5, 0]}>
         <mesh>
-          <torusGeometry args={[3, 0.1, 16, 100]} />
+          <torusGeometry args={[6, 0.1, 16, 100]} />
           <meshStandardMaterial color="#00E6CA" metalness={0.9} roughness={0.1} emissive="#00E6CA" emissiveIntensity={0.5} />
         </mesh>
       </group>
+      
+      {/* Glowing accents on the dome */}
+      <mesh position={[0, 3, 0]}>
+        <ringGeometry args={[3.9, 4, 32]} />
+        <meshStandardMaterial color="#00E6CA" emissive="#00E6CA" emissiveIntensity={0.5} transparent opacity={0.7} />
+      </mesh>
     </group>
   );
 };
@@ -250,7 +265,7 @@ const Hero3D: React.FC = () => {
           color="#00E6CA"
         />
         <ParticleField />
-        <Architecture3D />
+        <NationalTheatre />
       </Canvas>
     </div>
   );

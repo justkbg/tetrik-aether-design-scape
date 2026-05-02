@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# Tetrik — Architecture & Design Website
 
-## Project info
+## Overview
+Tetrik is a modern architecture website concept designed to showcase architectural projects, design philosophy, and visual storytelling in a clean, minimal digital experience.
 
-**URL**: https://lovable.dev/projects/65c51bc9-a015-4c16-aefd-f72e74e8a42b
+This project explores how architecture firms can present their work online in a more immersive and structured way.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Purpose
+The goal of this project is to design a digital presence for an architecture brand that focuses on:
+- Visual clarity
+- Minimal design language
+- Strong presentation of architectural work
+- Smooth user experience
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/65c51bc9-a015-4c16-aefd-f72e74e8a42b) and start prompting.
+## Key Features
+- Clean, modern landing page design  
+- Project showcase layout for architecture work  
+- Minimal UI focused on visuals  
+- Responsive design for all devices  
+- Smooth navigation experience  
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## Design Focus
+This project emphasizes:
+- Simplicity over complexity  
+- Visual hierarchy and spacing  
+- Typography-driven design  
+- Strong presentation of imagery  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Tech Stack
+- React  
+- TypeScript  
+- Vite  
+- Tailwind CSS  
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Current Status
+This is a UI/UX-focused prototype.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The core layout and design system are implemented. Future improvements will focus on refining animations, interactions, and content structure.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Inspiration
+This project draws inspiration from modern architecture firms that prioritize minimal digital presentation and strong visual identity in their websites.
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Preview
+Screenshots of the current design:
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/65c51bc9-a015-4c16-aefd-f72e74e8a42b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+![Home](image.png)
+![Project View](Screenshot 2026-05-02 122654.png)
+![Detail Section](Screenshot 2026-05-02 122622.png)
